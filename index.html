@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W-Gaming Esport</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="img/wgaming-favicon.png">
+
+    <style>
+      /* BEGIN: Video Background */
+      #home {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #home video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      /* END: Video Background */
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="#home"><img class="logo-header" src="img/wgaming-png.png" alt="logo-wgaming"></a>
+      <nav>
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#team">Équipe</a></li>
+          <li><a href="#team">compétitions</a></li>
+          <li><a href="#about">A propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <video src="video/PubEVA.mp4" autoplay muted loop></video>
+      <div class="hero">
+        <h1>Bienvenue sur W-Gaming Esport</h1>
+        <p>Rejoignez-nous dans le monde du jeu compétitif</p>
+        <a href="#about" class="btn">Voir plus</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>A propos</h2>
+        <p>Notre équipe esport est une force à ne pas sous-estimer. Composée de
+          joueurs passionnés et dévoués, nous nous efforçons de repousser les
+          limites du jeu compétitif. Chaque membre apporte une expertise unique
+          et une passion indéniable pour l'esport. Nous sommes plus qu'une
+          équipe, nous sommes une famille. Rejoignez-nous dans cette aventure
+          palpitante et découvrez le monde de l'esport comme jamais auparavant.</p>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <h2>Nos Équipes</h2>
+        <div class="game-selection">
+          <button
+            id="eva-btn"
+            class="game-btn active"
+            onclick="showComposition('eva')">
+            EVA
+          </button>
+          <button
+            id="overwatch-btn"
+            class="game-btn"
+            onclick="showComposition('overwatch')">
+            Overwatch
+          </button>
+          <button
+            id="valorant-btn"
+            class="game-btn"
+            onclick="showComposition('valorant')">
+            Valorant
+          </button>
+        </div>
+        <div id="eva-composition" class="team-members">
+          <div class="member">
+            <img src="img/player1.jpg" alt="Player 1" />
+            <h3>Flav</h3>
+            <p>Position: Mid Laner</p>
+          </div>
+          <div class="member">
+            <img src="img/player2.jpg" alt="Player 2" />
+            <h3>Yaniscreed</h3>
+            <p>Position: GROS CAMPER</p>
+          </div>
+          <div class="member">
+            <img src="player3.jpg" alt="Player 3" />
+            <h3>Ryu_198</h3>
+            <p>Position: Top Laner</p>
+          </div>
+          <div class="member">
+            <img src="img/player4.jpg" alt="Player 4" />
+            <h3>Lockolin</h3>
+            <p>Position: ADC</p>
+          </div>
+          <div class="member">
+            <img src="player5.jpg" alt="Player 5" />
+            <h3>//</h3>
+            <p>Position: Remplaçant</p>
+          </div>
+        </div>
+        <div
+          id="overwatch-composition"
+          class="team-members"
+          style="display: none"
+        >
+          <div class="member">
+            <img src="img/d.va.png" alt="Overwatch Player 1" />
+            <h3>Lockolin</h3>
+            <p>Position: TANK</p>
+            <p>Main: D.VA</p>
+          </div>
+          <div class="member">
+            <img src="img/tracer.png" alt="Overwatch Player 2" />
+            <h3>Ryu_198</h3>
+            <p>Position: DPS/HEAL</p>
+            <p>Main: Tracer</p>
+          </div>
+          <div class="member">
+            <img src="img/genji.png" alt="Overwatch Player 3" />
+            <h3>Yaniscreed</h3>
+            <p>Position: DPS</p>
+            <p>Main: Genji</p>
+          </div>
+          <div class="member">
+            <img src="img/vitale.png" alt="Overwatch Player 4" />
+            <h3>Samantha</h3>
+            <p>Position: HEAL</p>
+            <p>Main: Vital</p>
+          </div>
+        </div>
+        <div
+          id="valorant-composition"
+          class="team-members"
+          style="display: none"
+        >
+          <div class="member">
+            <img src="valorant-player1.jpg" alt="Valorant Player 1" />
+            <h3>Valorant Player 1</h3>
+          </div>
+          <div class="member">
+            <img src="valorant-player2.jpg" alt="Valorant Player 2" />
+            <h3>Valorant Player 2</h3>
+          </div>
+          <div class="member">
+            <img src="valorant-player3.jpg" alt="Valorant Player 3" />
+            <h3>Valorant Player 3</h3>
+          </div>
+          <div class="member">
+            <img src="valorant-player4.jpg" alt="Valorant Player 4" />
+            <h3>Valorant Player 4</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contactez W-GAMING</h2>
+        <form>
+          <input type="text" placeholder="Votre nom" />
+          <input type="email" placeholder="Votre email" />
+          <textarea placeholder="Votre Message"></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 W-Gaming Esport. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
